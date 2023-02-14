@@ -44,7 +44,9 @@
         <div class="container-fluid barraTituloSeccion p-4">
             <div class="row">
                 <div class="col-lg-4 col-sm-12 d-flex align-items-center p-0">
-                    <img class="w-25 flecha" src="./assets/images/atras.png" alt="flecha atras">
+                    <a href="./stats.html">
+                        <img class="w-60 flecha" src="./assets/images/atras.png" alt="flecha atras">
+                    </a>
                 </div>
                 <div class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-center p-0">
                     <h1>
@@ -52,90 +54,106 @@
                     </h1>
                 </div>
                 <div class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-end p-0">
-                    <img class="w-25 flecha" src="./assets/images/proximo.png" alt="flecha siguiente">
+                    <a href="./upcoming_events.html">
+                        <img class="w-60 flecha" src="./assets/images/proximo.png" alt="flecha siguiente">
+                    </a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <div class="col-lg-12 col-sm-12 d-flex align-items-center justify-content p-3 barraBusquedaMain">
-            <div class="form-check p-4">
-                <input class="form-check-input" type="checkbox" value="category1" id="category1" checked>
-                <label class="form-check-label" for="category1">
-                    Category 1
-                </label>
+        <div class="container-fluid d-inline-flex justify-content-around barraBusquedaMain">
+            <div class="row">
+                <div class="form-check col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-check-input" type="checkbox" value="category1" id="category1" checked>
+                    <label class="form-check-label" for="category1">
+                        Category 1
+                    </label>
+                </div>
+                <div class="form-check col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-check-input" type="checkbox" value="category2" id="category2">
+                    <label class="form-check-label" for="category2">
+                        Category 2
+                    </label>
+                </div>
+                <div class="form-check col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-check-input" type="checkbox" value="category3" id="category3">
+                    <label class="form-check-label" for="category3">
+                        Category 3
+                    </label>
+                </div>
+                <div class="form-check col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-check-input" type="checkbox" value="category4" id="category4">
+                    <label class="form-check-label" for="category4">
+                        Category 4
+                    </label>
+                </div>
+                <div class="form-check col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-check-input" type="checkbox" value="category5" id="category5">
+                    <label class="form-check-label" for="category5">
+                        Category 5
+                    </label>
+                </div>
+                <div class="input-group col-lg-2 col-md-4 col-sm-6">
+                    <input class="form-control border-end-0 border" type="search" value="" id="example-search-input">
+                    <span class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
             </div>
-            <div class="form-check p-4">
-                <input class="form-check-input" type="checkbox" value="category2" id="category2">
-                <label class="form-check-label" for="category2">
-                    Category 2
-                </label>
-            </div>
-            <div class="form-check p-4">
-                <input class="form-check-input" type="checkbox" value="category3" id="category3">
-                <label class="form-check-label" for="category3">
-                    Category 3
-                </label>
-            </div>
-            <div class="form-check p-4">
-                <input class="form-check-input" type="checkbox" value="category4" id="category4">
-                <label class="form-check-label" for="category4">
-                    Category 4
-                </label>
-            </div>
-            <div class="form-check p-4">
-                <input class="form-check-input" type="checkbox" value="category5" id="category5">
-                <label class="form-check-label" for="category5">
-                    Category 5
-                </label>
-            </div>
-            <div class="input-group">
-                <input class="form-control border-end-0 border" type="search" value="" id="example-search-input">
-                <span class="input-group-append">
-                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border" type="button">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </span>
-            </div>
-
         </div>
 
-        <div class="container-fluid d-inline-flex justify-content-around panelEvents p-4">
-        <!-- <div class="d-flex justify-content-around panelInfo p-4">     -->
-            <div class="card d-flex align-items-center justify-content-end" style="width: 12rem;">
-                <img src="./assets/images/Cinema.jpg" class="card-img-top imagenCarta" alt="cinema">
-                <div class="card-body justify-content-center">
-                    <h5 class="card-title">Cinema</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="container-fluid d-inline-flex justify-content-around panelEvents">
+            <div class="row">
+            <!-- <div class="d-flex justify-content-around panelInfo p-4">     -->
+                <div class="card" style="width: 12rem;">
+                    <img src="./assets/images/Cinema.jpg" class="card-img-top imagenCarta" alt="cinema">
+                    <div class="card-body">
+                        <h5 class="card-title">Cinema</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex">
+                            <p>Price $0000</p>
+                            <a href="#" class="btn btn-primary sombreado">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 12rem;">
+                    <img src="./assets/images/Costume_Party.jpg" class="card-img-top imagenCarta" alt="costume party">
+                    <div class="card-body">
+                        <h5 class="card-title">Costume party</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex">
+                            <p>Price $0000</p>
+                            <a href="#" class="btn btn-primary sombreado">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 12rem;">
+                    <img src="./assets/images/Food_Fair.jpg" class="card-img-top imagenCarta" alt="food fair">
+                    <div class="card-body">
+                        <h5 class="card-title">Food fair</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex">
+                            <p>Price $0000</p>
+                            <a href="#" class="btn btn-primary sombreado">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 12rem;">
+                    <img src="./assets/images/Marathon.jpg" class="card-img-top imagenCarta" alt="marathon">
+                    <div class="card-body">
+                        <h5 class="card-title">Marathon</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex">
+                            <p>Price $0000</p>
+                            <a href="#" class="btn btn-primary sombreado">Ver más...</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 12rem;">
-                <img src="./assets/images/Costume_Party.jpg" class="card-img-top imagenCarta" alt="costume party">
-                <div class="card-body">
-                    <h5 class="card-title">Costume party</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 12rem;">
-                <img src="./assets/images/Food_Fair.jpg" class="card-img-top imagenCarta" alt="food fair">
-                <div class="card-body">
-                    <h5 class="card-title">Food fair</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 12rem;">
-                <img src="./assets/images/Marathon.jpg" class="card-img-top imagenCarta" alt="marathon">
-                <div class="card-body">
-                    <h5 class="card-title">Marathon</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-
         </div>
     </main>
 
