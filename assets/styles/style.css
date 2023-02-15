@@ -22,7 +22,7 @@ body{
     color: black;
 }
 
-.barraTituloSeccion{
+.bordeyfondo1{
     background-color: rgb(231, 229, 229);
     border: 1px solid black;
 }
@@ -31,18 +31,18 @@ body{
     max-width: 55px;
 }
 
-.pie{
-    background-color: rgb(179, 177, 177);
-    border: 1px solid black;
-}
-
-.imagenCarta{
-    width: 10rem;
-    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
-    /* box-shadow: 10px 10px; */
-    box-shadow: -10px -10px 15px -2px rgba(0, 0, 0, 0.75);
-}
-
 .sombreado{
     box-shadow: -10px -10px 15px -2px rgba(0, 0, 0, 0.75);
 }
+
+/* .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #333;
+    border-color: #333;
+}
+ */
+
+ img.imagenGrisada {               
+    opacity: 0.15;
+    filter: alpha(opacity=40);
+    zoom: 1;  /* needed to trigger "hasLayout" in IE if no width or height is set */ 
+ }
