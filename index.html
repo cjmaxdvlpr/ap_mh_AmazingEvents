@@ -16,62 +16,127 @@
 
 <body>
     <header>
-        <div class="container-fluid bordeyfonodo0 p-4">
-            <div class="row">
-                <div class="col-lg-4 col-sm-12 
-                            d-flex align-items-center 
-                            justify-content-center 
-                            justify-content-lg-start 
-                            p-0">
-                    <img class="w-25" src="./assets/images/Logo_Amazing_Events.png" alt="logo A Events">
+
+        <nav class="navbar navbar-expand-lg bordeyfonodo0" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
+                <div class="col-5 
+                d-flex align-items-center 
+                justify-content-center 
+                p-0">
+                    <img class="w-50" src="./assets/images/Logo_Amazing_Events.png" alt="logo A Events">
                 </div>
-                <div class="col-lg-8 col-sm-12 p-0">
-                    <nav class="container-fluid p-0">
-                        <ul class="nav d-flex justify-content-center justify-content-lg-end align-items-center">
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link active" href="#">Home</a>
+                <!-- <a class="navbar-brand" href="#">Responsive offcanvas navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                    aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header justify-content-end">
+                        <!-- <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Título Menú</h5> -->
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link active px-2" href="#">Home</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./upcoming_events.html">Upcoming Events</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./upcoming_events.html">Upcoming Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./past_events.html">Past Events</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./past_events.html">Past Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./contact.html">Contact</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./contact.html">Contact</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./stats.html">Stats</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./stats.html">Stats</a>
                             </li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
 
         <div class="container-fluid bordeyfondo1 p-4">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center p-0">
+                <div class="col-4 d-flex align-items-center p-0">
                     <a href="#">
                         <img class="w-60 flecha imagenGrisada" src="./assets/images/atras.png" alt="flecha atras">
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center justify-content-center p-0">
-                    <h1>
+                <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                    <h1 class="text-center">
                         Home
                     </h1>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center justify-content-end p-0">
+                <div class="col-4 d-flex align-items-center justify-content-end p-0">
                     <a href="./upcoming_events.html">
                         <img class="w-60 flecha" src="./assets/images/proximo.png" alt="flecha siguiente">
                     </a>
                 </div>
             </div>
         </div>
+        
     </header>
 
+
     <main>
-        <div class="mx-0">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+            <div class="container-fluid justify-content-end">
+                <!-- <a class="navbar-brand" href="#">Responsive offcanvas navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar3" aria-controls="offcanvasNavbar3">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fa fa-search bg-dark p-2"></i>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar3"
+                    aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Search</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body align-items-center justify-content-between">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox1"
+                                value="CategoryOne">
+                            <label class="form-check-label" for="catCheckbox1">Category One</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox2"
+                                value="CategoryTwo">
+                            <label class="form-check-label" for="catCheckbox2">Category Two</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox3"
+                                value="CategoryThree">
+                            <label class="form-check-label" for="catCheckbox3">Category Three</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox4"
+                                value="CategoryFour">
+                            <label class="form-check-label" for="catCheckbox4">Category Four</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox5"
+                                value="CategoryFive">
+                            <label class="form-check-label" for="catCheckbox5">Category Five</label>
+                        </div>
+                        <form class="d-flex mt-3 mt-lg-0" role="search">
+                            <input class="form-control rounded-0 me-2" type="search" placeholder="" aria-label="Search">
+                            <button class="btn btn-outline-light rounded-0" type="submit">
+                                <i class="fa fa-search  p-1"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+<!--         <div class="mx-0">
             <nav class="navbar bg-light mx-0">
                 <div class="container-fluid mx-0">
                     <div class="ps-5 ms-5">
@@ -102,7 +167,7 @@
                         </div>
                     </div>
                     <div class="d-flex me-5">
-                        <form class="d-flex" role="search">
+                        <form class="d-flex align-items-center" role="search">
                             <input class="form-control rounded-0 border-dark me-1" type="search" aria-label="Search">
                             <button type="button" class="btn bg-dark text-light rounded-0">
                                 <i class="fa fa-search"></i>
@@ -111,58 +176,70 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </div> -->
 
         <div class="d-flex justify-content-around panelEvents py-3 my-3">
-            <div class="row">
+            <div class="row justify-content-around">
                 <!-- <div class="d-flex justify-content-around panelInfo p-4">     -->
                 <div class="card border-dark rounded-0 m-4" style="width: 15rem;">
                     <img src="./assets/images/Food_Fair.jpg" class="card-img-top mt-3 sombreado" alt="food fair">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">Food fair</h5>
                         <p class="card-text text-center">Texto descriptivo del evento. Texto descriptivo del evento.
                             Texto descriptivo del evento.</p>
-                        <div class="d-flex align-items-center justify-content-between mx-0">
-                            <p>Price $0000</p>
-                            <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver más</a>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center justify-content-between mx-0">
+                                <p>Price $0000</p>
+                                <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
+                                    más</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card border-dark rounded-0 m-4" style="width: 15rem;">
                     <img src="./assets/images/Costume_Party.jpg" class="card-img-top mt-3 sombreado"
                         alt="costume party">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">Costume party</h5>
                         <p class="card-text text-center">Texto descriptivo del evento. Texto descriptivo del evento.
                             Texto descriptivo del evento.</p>
-                        <div class="d-flex align-items-center justify-content-between mx-0">
-                            <p>Price $0000</p>
-                            <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver más</a>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center justify-content-between mx-0">
+                                <p>Price $0000</p>
+                                <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
+                                    más</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card border-dark rounded-0 m-4" style="width: 15rem;">
                     <img src="./assets/images/Music_Concert.jpg" class="card-img-top mt-3 sombreado"
                         alt="music concert">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">Music concert</h5>
                         <p class="card-text text-center">Texto descriptivo del evento. Texto descriptivo del evento.
                             Texto descriptivo del evento.</p>
-                        <div class="d-flex align-items-center justify-content-between mx-0">
-                            <p>Price $0000</p>
-                            <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver más</a>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center justify-content-between mx-0">
+                                <p>Price $0000</p>
+                                <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
+                                    más</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card border-dark rounded-0 m-4" style="width: 15rem;">
                     <img src="./assets/images/Marathon.jpg" class="card-img-top mt-3 sombreado" alt="marathon">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">Marathon</h5>
                         <p class="card-text text-center">Texto descriptivo del evento. Texto descriptivo del evento.
                             Texto descriptivo del evento.</p>
-                        <div class="d-flex align-items-center justify-content-between mx-0">
-                            <p>Price $0000</p>
-                            <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver más</a>
+                        <div class="mt-auto">
+                            <div class="d-flex align-items-center justify-content-between mx-0">
+                                <p>Price $0000</p>
+                                <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
+                                    más</a>
+                            </div>
                         </div>
                     </div>
                 </div>

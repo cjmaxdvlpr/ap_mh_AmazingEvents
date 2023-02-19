@@ -15,52 +15,62 @@
 
 <body>
     <header>
-        <div class="container-fluid bordeyfonodo0 p-4">
-            <div class="row">
-                <div class="col-lg-4 col-sm-12 
-                            d-flex align-items-center 
-                            justify-content-center 
-                            justify-content-lg-start 
-                            p-0">
-                    <img class="w-25" src="./assets/images/Logo_Amazing_Events.png" alt="logo A Events">
+        <nav class="navbar navbar-expand-lg bordeyfonodo0" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
+                <div class="col-5 
+                d-flex align-items-center 
+                justify-content-center 
+                p-0">
+                    <img class="w-50" src="./assets/images/Logo_Amazing_Events.png" alt="logo A Events">
                 </div>
-                <div class="col-lg-8 col-sm-12 p-0">
-                    <nav class="container-fluid p-0">
-                        <ul class="nav d-flex justify-content-center justify-content-lg-end align-items-center">
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link active" href="./">Home</a>
+                <!-- <a class="navbar-brand" href="#">Responsive offcanvas navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                    aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header justify-content-end">
+                        <!-- <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Título Menú</h5> -->
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link active px-2" href="./">Home</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./upcoming_events.html">Upcoming Events</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./upcoming_events.html">Upcoming Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./past_events.html">Past Events</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./past_events.html">Past Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="#">Contact</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="#">Contact</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2">
-                                <a class="nav-link" href="./stats.html">Stats</a>
+                            <li class="nav-item elementoMenu mx-2 my-1">
+                                <a class="nav-link px-2" href="./stats.html">Stats</a>
                             </li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
 
         <div class="container-fluid bordeyfondo1 p-4">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center p-0">
+                <div class="col-4 d-flex align-items-center p-0">
                     <a href="./past_events.html">
                         <img class="w-60 flecha" src="./assets/images/atras.png" alt="flecha atras">
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center justify-content-center p-0">
-                    <h1>
+                <div class="col-4 d-flex align-items-center justify-content-center p-0">
+                    <h1 class="text-center">
                         Contact
                     </h1>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-4 d-flex align-items-center justify-content-end p-0">
+                <div class="col-4 d-flex align-items-center justify-content-end p-0">
                     <a href="./stats.html">
                         <img class="w-60 flecha" src="./assets/images/proximo.png" alt="flecha siguiente">
                     </a>
