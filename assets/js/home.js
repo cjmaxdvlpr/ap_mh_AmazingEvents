@@ -7,5 +7,8 @@ function buildHTMLEventsCardList(eventsData){
     return htmlEventsList;
 }
 
-console.log("Todos los eventos: ");
-console.log(buildHTMLEventsCardList(data));
+/* console.log("Todos los eventos: ");
+console.log(buildHTMLEventsCardList(data)); */
+
+let contenedorCartas = document.getElementById("contenedorCartas");
+contenedorCartas.innerHTML = buildHTMLEventsCardList(data);

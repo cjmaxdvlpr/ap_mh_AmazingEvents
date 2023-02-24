@@ -1,57 +1,76 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{ 
-    min-height: 100vh; 
+/* ================================================================= */
+/* Agregado para que la página ocupe todo el alto del viewport */
+html,
+body {
+    height: 100%;
+    min-height: 100%;
 }
 
-.fonodo0{
-    background-color: rgb(184, 179, 179);    
+body {
+    display: flex;
+    flex-direction: column;
 }
 
-.bordeyfonodo0{
+/* header,
+footer {
+    flex: none;
+} */
+
+main {
+    overflow-y: scroll;
+    /* -webkit-overflow-scrolling: touch; */
+    /* flex: auto; */
+}
+
+/* ================================================================= */
+
+
+.fonodo0 {
+    background-color: rgb(184, 179, 179);
+}
+
+.bordeyfonodo0 {
     background-color: rgb(184, 179, 179);
     border: 1px solid black;
 }
 
-.elementoMenu{
+.elementoMenu {
     background-color: white;
     border: 1px solid black;
 }
 
-.elementoMenu > a{
+.elementoMenu>a {
     color: black;
 }
 
-.bordeyfondo1{
+.bordeyfondo1 {
     background-color: rgb(231, 229, 229);
     border: 1px solid black;
 }
 
-.flecha{
+.flecha {
     max-width: 55px;
 }
 
-.sombreado{
+.sombreado {
     box-shadow: -10px -10px 15px -2px rgba(0, 0, 0, 0.75);
 }
 
-/* .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-    background-color: #333;
-    border-color: #333;
-}
- */
-
- img.imagenGrisada {               
+img.imagenGrisada {
     opacity: 0.15;
     filter: alpha(opacity=40);
-    zoom: 1;  /* needed to trigger "hasLayout" in IE if no width or height is set */ 
- }
+    zoom: 1;
+    /* needed to trigger "hasLayout" in IE if no width or height is set */
+}
 
- .table tr td{
+.table tr td {
     padding: 0 5px;
     height: 25px;
- }
+}
+

@@ -11,5 +11,8 @@ function buildHTMLUpcomingEventsCardList(eventsData){
     return htmlEventsList;
 }
 
-console.log("Eventos futuros: ");
-console.log(buildHTMLUpcomingEventsCardList(data));
+/* console.log("Eventos futuros: ");
+console.log(buildHTMLUpcomingEventsCardList(data)); */
+
+let contenedorCartas = document.getElementById("contenedorCartas");
+contenedorCartas.innerHTML = buildHTMLUpcomingEventsCardList(data);

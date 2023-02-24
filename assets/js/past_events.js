@@ -11,6 +11,8 @@ function buildHTMLPastEventsCardList(eventsData){
     return htmlEventsList;
 }
 
-console.log("Eventos pasados: ");
-console.log(buildHTMLPastEventsCardList(data));
+/* console.log("Eventos pasados: ");
+console.log(buildHTMLPastEventsCardList(data)); */
 
+let contenedorCartas = document.getElementById("contenedorCartas");
+contenedorCartas.innerHTML = buildHTMLPastEventsCardList(data);
