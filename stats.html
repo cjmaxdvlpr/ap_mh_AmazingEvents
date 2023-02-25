@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-100" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,9 @@
     <title>Stats</title>
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
     <header>
-        <nav class="navbar navbar-expand-lg bordeyfonodo0" aria-label="Offcanvas navbar large">
+        <nav class="navbar navbar-expand-lg border border-dark fondo0" aria-label="Offcanvas navbar large">
             <div class="container-fluid">
                 <div class="col-5 
                 d-flex align-items-center 
@@ -23,7 +23,6 @@
                 p-0">
                     <img class="w-50" src="./assets/images/Logo_Amazing_Events.png" alt="logo A Events">
                 </div>
-                <!-- <a class="navbar-brand" href="#">Responsive offcanvas navbar</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
                     <span class="navbar-toggler-icon"></span>
@@ -31,26 +30,25 @@
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
                     aria-labelledby="offcanvasNavbar2Label">
                     <div class="offcanvas-header justify-content-end">
-                        <!-- <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Título Menú</h5> -->
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item elementoMenu mx-2 my-1">
-                                <a class="nav-link active px-2" href="./">Home</a>
+                            <li class="nav-item bg-white border border-dark mx-2 my-1">
+                                <a class="nav-link text-black px-2" href="./">Home</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2 my-1">
-                                <a class="nav-link px-2" href="./upcoming_events.html">Upcoming Events</a>
+                            <li class="nav-item bg-white border border-dark mx-2 my-1">
+                                <a class="nav-link text-black px-2" href="./upcoming_events.html">Upcoming Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2 my-1">
-                                <a class="nav-link px-2" href="./past_events.html">Past Events</a>
+                            <li class="nav-item bg-white border border-dark mx-2 my-1">
+                                <a class="nav-link text-black px-2" href="./past_events.html">Past Events</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2 my-1">
-                                <a class="nav-link px-2" href="./contact.html">Contact</a>
+                            <li class="nav-item bg-white border border-dark mx-2 my-1">
+                                <a class="nav-link text-black px-2" href="./contact.html">Contact</a>
                             </li>
-                            <li class="nav-item elementoMenu mx-2 my-1">
-                                <a class="nav-link px-2" href="#">Stats</a>
+                            <li class="nav-item bg-white border border-dark mx-2 my-1">
+                                <a class="nav-link text-black active px-2" href="#">Stats</a>
                             </li>
                         </ul>
                     </div>
@@ -59,7 +57,7 @@
         </nav>
 
 
-        <div class="container-fluid bordeyfondo1 p-4">
+        <div class="container-fluid border border-dark fondo1 p-4">
             <div class="row">
                 <div class="col-4 d-flex align-items-center p-0">
                     <a href="./contact.html">
@@ -80,11 +78,11 @@
         </div>
     </header>
 
-    <main>
+    <main class="overflow-y-scroll">
         <div class="m-5">
             <table class="table table-hover table-bordered border-1 border-dark m-0">
                 <thead>
-                    <tr class="bordeyfonodo0">
+                    <tr class="border border-dark fondo0">
                         <th colspan="3">Events statistics</th>
                     </tr>
                 </thead>
@@ -103,7 +101,7 @@
             </table>
             <table class="table table-hover table-bordered border-1 border-dark m-0">
                 <thead>
-                    <tr class="bordeyfonodo0">
+                    <tr class="border border-dark fondo0">
                         <th colspan="3">Upcoming events statistics by category</th>
                     </tr>
                 </thead>
@@ -132,7 +130,7 @@
             </table>
             <table class="table table-hover table-bordered border-1 border-dark">
                 <thead>
-                    <tr class="bordeyfonodo0">
+                    <tr class="border border-dark fondo0">
                         <th colspan="3">Past Events statistic by category</th>
                     </tr>
                 </thead>
@@ -171,87 +169,10 @@
             </table>
         </div>
 
-<!--         <div class=" m-5">
-            <table class="table table-bordered border-1 border-dark m-0">
-                <thead>
-                    <tr class="bordeyfonodo0">
-                        <th colspan="3">Events statistics</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Events with highest percentage of attendance</td>
-                        <td>Events with lowest percentage of attendance</td>
-                        <td>Event with larger capacity</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="bordeyfonodo0">
-                        <th colspan="3">Upcoming events statistics by category</th>
-                    </tr>
-                    <tr>
-                        <td>Categories</td>
-                        <td>Revenues</td>
-                        <td>Percentage of attendance</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr class="bordeyfonodo0">
-                        <th colspan="3">Past Events statistic by category</th>
-                    </tr>
-                    <tr>
-                        <td>Categories</td>
-                        <td>Revenues</td>
-                        <td>Percentage of attendance</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
     </main>
 
     <footer>
-        <div class="container-fluid bordeyfondo1">
+        <div class="container-fluid border border-dark fondo1">
             <div class="row">
                 <div class="col-sm-3 col-lg-3 d-flex justify-content-start align-items-center p-2">
                     <img class="mx-2" src="./assets/images/instagram.png" alt="icono instagram" width="54" height="54">

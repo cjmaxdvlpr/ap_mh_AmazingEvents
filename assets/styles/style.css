@@ -4,54 +4,12 @@
     box-sizing: border-box;
 }
 
-/* ================================================================= */
-/* Agregado para que la página ocupe todo el alto del viewport */
-html,
-body {
-    height: 100%;
-    min-height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-/* header,
-footer {
-    flex: none;
-} */
-
-main {
-    overflow-y: scroll;
-    /* -webkit-overflow-scrolling: touch; */
-    /* flex: auto; */
-}
-
-/* ================================================================= */
-
-
-.fonodo0 {
+.fondo0 {
     background-color: rgb(184, 179, 179);
 }
 
-.bordeyfonodo0 {
-    background-color: rgb(184, 179, 179);
-    border: 1px solid black;
-}
-
-.elementoMenu {
-    background-color: white;
-    border: 1px solid black;
-}
-
-.elementoMenu>a {
-    color: black;
-}
-
-.bordeyfondo1 {
+.fondo1 {
     background-color: rgb(231, 229, 229);
-    border: 1px solid black;
 }
 
 .flecha {
@@ -66,7 +24,6 @@ img.imagenGrisada {
     opacity: 0.15;
     filter: alpha(opacity=40);
     zoom: 1;
-    /* needed to trigger "hasLayout" in IE if no width or height is set */
 }
 
 .table tr td {
