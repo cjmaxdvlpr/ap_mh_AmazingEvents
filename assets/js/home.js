@@ -7,8 +7,16 @@ function buildHTMLEventsCardList(eventsData){
     return htmlEventsList;
 }
 
-/* console.log("Todos los eventos: ");
-console.log(buildHTMLEventsCardList(data)); */
 
-let contenedorCartas = document.getElementById("contenedorCartas");
-contenedorCartas.innerHTML = buildHTMLEventsCardList(data);
+fillCardContainer(buildHTMLEventsCardList(data), "contenedorCartas");
+
+
+//Selección de categorías en el conjunto de cartas seleccionadas
+let selectedEvents = []; //Array de eventos seleccionados para completar las cartas de la página
+let selectedEventsCategories = [];
+selectedEvents.forEach(event => {
+    if(!selectedEventsCategories.includes(event.category)){
+        selectedEventsCategories.push(event.category);
+    }
+});
+
