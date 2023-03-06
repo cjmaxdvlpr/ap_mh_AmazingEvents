@@ -1,5 +1,4 @@
 
-
 function buildHTMLEventCard(eventData){
     return `<div class="card border-dark rounded-0 m-4" style="width: 15rem;">
         <img src="${eventData.image}" class="card-img-top mt-3 sombreado" alt="food fair">
@@ -17,22 +16,22 @@ function buildHTMLEventCard(eventData){
     </div>`;
 }
 
-function fillCardContainer(cardData, idCardContainer){
+function fillCardContainer(htmlCardsData, idCardContainer){
     let cardContainer = document.getElementById(idCardContainer);
-    cardContainer.innerHTML = cardData;
+    cardContainer.innerHTML = htmlCardsData;
 }
 
-function buildHTMLCategoryCheckbox(eventData, idCheckbox){
+function buildHTMLCategoryCheckbox(event, idCheckbox){
     return `<div class="form-check form-check-inline">
     <input class="form-check-input rounded-0 border-dark" type="checkbox" id="${idCheckbox}"
-        value="${eventData.category.toLowerCase()}">
-    <label class="form-check-label" for="${idCheckbox}">${eventData.category}</label>
+        value="${event.category.toLowerCase()}">
+    <label class="form-check-label" for="${idCheckbox}">${event.category}</label>
 </div>`;
 }
 
-function fillCheckboxContainer(checkboxData, idCheckboxContainer){
+function fillCheckboxContainer(htmlCheckboxesData, idCheckboxContainer){
     let checkboxContainer = document.getElementById(idCheckboxContainer);
-    checkboxContainer.innerHTML = checkboxData;
+    checkboxContainer.innerHTML = htmlCheckboxesData;
 }
 
 
@@ -46,11 +45,12 @@ function selectEvents(data, selectorFunction){
 }
 
 //La función devuelve un listado de los índices de los eventos que cumplen con las condiciones deseadas
-function getCardsOfInterestIndexes(events, selectorFunction){
+function getEventsOfInterestIndexes(events, selectorFunction){
     let indexes = [];
-    events.forEach( event => () => {
-        if(selectorFunction(event)){
-            indexes.push((event._id)-1);
+    events.forEach( event => {
+        if(selectorFunction){
+            // indexes.push((event._id)-1);
+            indexes.push(events.indexOf(event));
         }
     });
     return indexes;
@@ -74,7 +74,7 @@ function dateEventSelector(eventsData, eventIndex, selector){
 }
 
 function categoryEventSelector(event){
-
+    
 }
 
 function searchEventSelector(event){
