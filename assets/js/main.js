@@ -8,7 +8,7 @@ function buildHTMLEventCard(eventData){
             <div class="mt-auto">
                 <div class="d-flex align-items-center justify-content-between mx-0">
                     <p>Price $${eventData.price}</p>
-                    <a href="./details.html" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
+                    <a href="./details.html?id=${eventData._id}" class="btn bg-dark text-light rounded-0 sombreado mb-3">Ver
                         más</a>
                 </div>
             </div>
@@ -25,13 +25,6 @@ function buildHTMLCategoryCheckbox(category, idCheckbox){
 </div>`;
 }
 
-/* function buildHTMLCategoryCheckbox(event, idCheckbox){
-    return `<div class="form-check form-check-inline">
-    <input class="form-check-input rounded-0 border-dark" type="checkbox" id="${idCheckbox}"
-        value="${event.category.toLowerCase()}">
-    <label class="form-check-label" for="${idCheckbox}">${event.category}</label>
-</div>`;
-} */
 
 function buildHTMLNoMatchesCard(){
     return `<div class="card border-dark rounded-0 m-4" style="width: 15rem;">
@@ -43,38 +36,17 @@ function buildHTMLNoMatchesCard(){
 </div>`
 }
 
+
 function fillCardContainer(htmlCardsData, idCardContainer){
     let cardContainer = document.getElementById(idCardContainer);
     cardContainer.innerHTML = htmlCardsData;
 }
 
+
 function fillCheckboxContainer(htmlCheckboxesData, idCheckboxContainer){
     let checkboxContainer = document.getElementById(idCheckboxContainer);
     checkboxContainer.innerHTML = htmlCheckboxesData;
 }
-
-
-//=====================================================================================
-
-//Función para seleccionar los eventos que se mostrarán en la página correspondiente.
-//La función selectorFunction hará la selección correspondiente tanto por fecha como por las opciones de búsqueda.
-/* function selectEvents(data, selectorFunction){
-    let selectedEvents = selectorFunction(data);
-    return selectedEvents;
-}
-
-//La función devuelve un listado de los índices de los eventos que cumplen con las condiciones deseadas
-function getEventsOfInterestIndexes(events, selectorFunction){
-    let indexes = [];
-    events.forEach( event => {
-        if(selectorFunction){
-            // indexes.push((event._id)-1);
-            indexes.push(events.indexOf(event));
-        }
-    });
-    return indexes;
-}
- */
 
 
 function dateEventSelector(eventsData, eventIndex, dateSelector){
@@ -97,8 +69,6 @@ function dateEventSelector(eventsData, eventIndex, dateSelector){
     }
 }
 
-
-//===========================================================
 
 function getFilteredByDateEventsIndexes(eventsData, dateSelector){
     let indexes = [];
@@ -134,33 +104,14 @@ function getCategories(eventsData, eventsIndexes){
 }
 
 
-function buildHTMLCategoryCheckboxList(eventsData, eventsIndexes, categories){
+function buildHTMLCategoryCheckboxList(categories){
     let htmlCategoryCheckboxList = "";
     categories.forEach(category => {
         htmlCategoryCheckboxList += buildHTMLCategoryCheckbox(category, ("checkbox_" + categories.indexOf(category)));
     })
-    
-/*     eventsIndexes.forEach( index => {
-        console.log(categories.includes(eventsData.events[index].category));
-        console.log(eventsData.events[index].category);
-        if(categories.includes(eventsData.events[index].category)){
-            htmlCategoryCheckboxList += buildHTMLCategoryCheckbox(eventsData.events[index], ("checkbox_" + index));
-        }
-    }); */
     return htmlCategoryCheckboxList;
 }
 
-/* function buildHTMLCategoryCheckboxList(eventsData, eventsIndexes, categories){
-    let htmlCategoryCheckboxList = "";
-    eventsIndexes.forEach( index => {
-        console.log(categories.includes(eventsData.events[index].category));
-        console.log(eventsData.events[index].category);
-        if(categories.includes(eventsData.events[index].category)){
-            htmlCategoryCheckboxList += buildHTMLCategoryCheckbox(eventsData.events[index], ("checkbox_" + index));
-        }
-    });
-    return htmlCategoryCheckboxList;
-} */
 
 //Función en desuso!
 function getCheckboxesStates(checkboxes){
@@ -168,6 +119,7 @@ function getCheckboxesStates(checkboxes){
     for(let checkbox of checkboxes){states.push(checkbox.checked)};
     return states;
 }
+
 
 function getSelectedEventsByCategoryIndexes(eventsData, evenstIndexes, checkboxes){
     let selectedEventsIndexes = [];
@@ -189,6 +141,7 @@ function getSelectedEventsByCategoryIndexes(eventsData, evenstIndexes, checkboxe
     return selectedEventsIndexes;
 }
 
+
 function getSelectedEventsBySearchImputIndexes(eventsData, eventIndexes, searchKey){
     let selectedEventsIndexes = [];
     eventIndexes.forEach(index => {
@@ -203,11 +156,13 @@ function getSelectedEventsBySearchImputIndexes(eventsData, eventIndexes, searchK
     return selectedEventsIndexes;
 }
 
+
 function eventsSelector(eventsData, eventsIndexes, checkboxes, searchKey){
     let selectedEventsByCheckboxesIndexes = getSelectedEventsByCategoryIndexes(eventsData, eventsIndexes, checkboxes);
     let selectedEventsIndexes = getSelectedEventsBySearchImputIndexes(eventsData, selectedEventsByCheckboxesIndexes, searchKey);
     return selectedEventsIndexes;
 }
+
 
 function getHTMLSelectedEvents(data, eventsIndexes, checkboxes, searchKey, dateSelector){
     let htmlSelectedCards = "";

@@ -1,28 +1,3 @@
-//Todos los eventos:
-/* function buildHTMLEventsCardList(eventsData){
-    let htmlEventsList = "";
-    for (let event of eventsData.events) {
-            htmlEventsList += buildHTMLEventCard(event);
-    }
-    return htmlEventsList;
-}
-
-
-fillCardContainer(buildHTMLEventsCardList(data), "contenedorCartas");
-
-
-//Selección de categorías en el conjunto de cartas seleccionadas
-let selectedEvents = []; //Array de eventos seleccionados para completar las cartas de la página
-let selectedEventsCategories = [];
-selectedEvents.forEach(event => {
-    if(!selectedEventsCategories.includes(event.category)){
-        selectedEventsCategories.push(event.category);
-    }
-});
-
- */
-
-//================================================
 
 function searchEventResponse(){
     let searchKey = document.getElementById("searchInput").value.toLowerCase();
@@ -33,7 +8,7 @@ let eventsIndexes = getFilteredByDateEventsIndexes(data, "all");
 let categories = getCategories(data, eventsIndexes);
 
 fillCardContainer(buildHTMLEventsOfInterestCardList(data, eventsIndexes, "all"), "cardContainer");
-fillCheckboxContainer(buildHTMLCategoryCheckboxList(data, eventsIndexes, categories), "checkboxContainer")
+fillCheckboxContainer(buildHTMLCategoryCheckboxList(categories), "checkboxContainer")
 
 
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
