@@ -13,7 +13,7 @@ fillCheckboxContainer(buildHTMLCategoryCheckboxList(categories), "checkboxContai
 
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 let input = document.getElementById("searchInput");
-
+let cleanSearchBarButton = document.getElementById("cleanSearchBarButton");
 
 //EVENTO: keyup (searchInput) ===========================================
 input.addEventListener("keyup", (event) => {
@@ -26,3 +26,13 @@ checkboxes.forEach(checkbox => {
         searchEventResponse()
     })
 })
+
+//EVENTO: click (cleanSearchBarButton) ==============================
+cleanSearchBarButton.addEventListener("click", () => {
+        checkboxes.forEach(checkbox => checkbox.checked = false)
+        input.value = "";
+        searchEventResponse()
+})
+
+
+
