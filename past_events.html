@@ -91,6 +91,9 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body align-items-center justify-content-between">
+                        <div id="checkboxContainer">
+                            <!-- Inserción de código de checkboxes de eventos mediante JS -->
+<!--     
                         <div class="form-check form-check-inline">
                             <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox1"
                                 value="CategoryOne">
@@ -115,9 +118,10 @@
                             <input class="form-check-input rounded-0 border-dark" type="checkbox" id="catCheckbox5"
                                 value="CategoryFive">
                             <label class="form-check-label" for="catCheckbox5">Category Five</label>
+                        </div> -->
                         </div>
                         <form class="d-flex mt-3 mt-lg-0" role="search">
-                            <input class="form-control rounded-0 me-2" type="search" placeholder="" aria-label="Search">
+                            <input class="form-control rounded-0 me-2" type="search" placeholder="" aria-label="Search" id="searchInput">
                             <button class="btn btn-outline-light rounded-0" type="submit">
                                 <i class="fa fa-search  p-1"></i>
                             </button>
@@ -132,7 +136,7 @@
     <main class="overflow-y-scroll">
 
         <div class="d-flex justify-content-around panelEvents py-3 my-3">
-            <div class="row justify-content-center w-100" id="contenedorCartas">
+            <div class="row justify-content-center w-100" id="cardContainer">
                 <!-- Inserción de código de cartas de evento mediante JS -->
             </div>
         </div>

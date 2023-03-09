@@ -1,32 +1,29 @@
-//Los eventos pasados:
-/* function buildHTMLPastEventsCardList(eventsData){
-    let htmlEventsList = "";
-    let currentDate = new Date(eventsData.currentDate);
-    for (let event of eventsData.events) {
-        let eventDate = new Date(event.date);
-        if (eventDate < currentDate) {
-            htmlEventsList += buildHTMLEventCard(event);
-        }
-    }
-    return htmlEventsList;
-} */
 
-function buildHTMLPastEventsCardList(eventsData){
-    let htmlEventsList = "";
-    eventsData.events.forEach(event => {
-        let index = eventsData.events.indexOf(event);
-        if(dateEventSelector(eventsData, index, "past")){
-            htmlEventsList += buildHTMLEventCard(event);
-        }
-    });
-    return htmlEventsList;
+
+function searchEventResponse(){
+    let searchKey = document.getElementById("searchInput").value.toLowerCase();
+    fillCardContainer(getHTMLSelectedEvents(data, pastEventIndexes, checkboxes, searchKey, "past"), "cardContainer");
 }
 
-fillCardContainer(buildHTMLPastEventsCardList(data), "contenedorCartas");
+let pastEventIndexes = getFilteredByDateEventsIndexes(data, "past");
+let categories = getCategories(data, pastEventIndexes);
+
+fillCardContainer(buildHTMLEventsOfInterestCardList(data, pastEventIndexes, "past"), "cardContainer");
+fillCheckboxContainer(buildHTMLCategoryCheckboxList(data, pastEventIndexes, categories), "checkboxContainer")
 
 
-/* console.log("Eventos pasados: ");
-console.log(buildHTMLPastEventsCardList(data)); */
+let checkboxes = document.querySelectorAll("input[type=checkbox]");
+let input = document.getElementById("searchInput");
 
-/* let contenedorCartas = document.getElementById("contenedorCartas");
-contenedorCartas.innerHTML = buildHTMLPastEventsCardList(data); */
+
+//EVENTO: keyup (searchInput) ===========================================
+input.addEventListener("keyup", (event) => {
+    searchEventResponse();
+})
+
+//EVENTO: change (checkboxes) ==============================
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        searchEventResponse()
+    })
+})
