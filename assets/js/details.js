@@ -4,8 +4,8 @@ let id = params.get('id');
 let event = data.events.find(event => event._id == id);
 
 document.getElementById('cardContainer').innerHTML = 
-`<div class="card border-dark rounded-0 m-4 col-8">
-        <img src="${event.image}" class="card-img-top mt-3 sombreado" alt="food fair">
+`<div class="card border-dark rounded-0 sombreado m-4 col-8">
+        <img src="${event.image}" class="card-img-top border border-dark mt-3 sombreado" alt="food fair">
         <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">${event.name}</h5>
             <p class="card-text text-center">${event.description}</p>

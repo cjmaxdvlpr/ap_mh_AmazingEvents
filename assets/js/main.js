@@ -1,7 +1,7 @@
 
 function buildHTMLEventCard(eventData){
-    return `<div class="card border-dark rounded-0 m-4" style="width: 15rem;">
-        <img src="${eventData.image}" class="card-img-top mt-3 sombreado" alt="food fair">
+    return `<div class="card border-dark rounded-0 sombreado m-4" style="width: 15rem;">
+        <img src="${eventData.image}" class="card-img-top border border-dark mt-3 sombreado" alt="food fair">
         <div class="card-body d-flex flex-column">
             <h5 class="card-title text-center">${eventData.name}</h5>
             <p class="card-text text-center">${eventData.description}</p>
@@ -27,7 +27,7 @@ function buildHTMLCategoryCheckbox(category, idCheckbox){
 
 
 function buildHTMLNoMatchesCard(){
-    return `<div class="card border-dark rounded-0 m-4" style="width: 15rem;">
+    return `<div class="card border-dark rounded-0 sombreado m-4" style="width: 15rem;">
     <img src="./assets/images/noMatches.png" class="card-img-top mt-3 sombreado" alt="food fair">
     <div class="card-body d-flex flex-column">
         <h5 class="card-title text-center">There are no matches for your search...</h5>
