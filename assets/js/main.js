@@ -1,4 +1,25 @@
 
+
+async function getEventsData(urlApi) {
+    try {
+        const response = await fetch(urlApi);
+        console.log(response);
+        // throw new Error("no se pudo obtener la data");
+        const data = await response.json();
+        console.log(data);
+        crearLista(data.results);
+        return data;
+        
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+let urlApi = "";
+let eventsData = getEventsData(urlApi);
+
+
+
 function buildHTMLEventCard(eventData){
     return `<div class="card border-dark rounded-0 sombreado m-4" style="width: 15rem;">
         <img src="${eventData.image}" class="card-img-top border border-dark mt-3 sombreado" alt="food fair">
