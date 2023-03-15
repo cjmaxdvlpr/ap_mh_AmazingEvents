@@ -1,25 +1,4 @@
 
-
-async function getEventsData(urlApi) {
-    try {
-        const response = await fetch(urlApi);
-        console.log(response);
-        // throw new Error("no se pudo obtener la data");
-        const data = await response.json();
-        console.log(data);
-        crearLista(data.results);
-        return data;
-        
-    } catch(error) {
-        console.log(error)
-    }
-}
-
-let urlApi = "";
-let eventsData = getEventsData(urlApi);
-
-
-
 function buildHTMLEventCard(eventData){
     return `<div class="card border-dark rounded-0 sombreado m-4" style="width: 15rem;">
         <img src="${eventData.image}" class="card-img-top border border-dark mt-3 sombreado" alt="food fair">
@@ -134,7 +113,6 @@ function buildHTMLCategoryCheckboxList(categories){
 }
 
 
-//Función en desuso!
 function getCheckboxesStates(checkboxes){
     let states = [];
     for(let checkbox of checkboxes){states.push(checkbox.checked)};
@@ -142,16 +120,16 @@ function getCheckboxesStates(checkboxes){
 }
 
 
-function getSelectedEventsByCategoryIndexes(eventsData, evenstIndexes, checkboxes){
+function getSelectedEventsByCategoryIndexes(eventsData, eventsIndexes, checkboxes){
     let selectedEventsIndexes = [];
     let checkboxesStates = getCheckboxesStates(checkboxes);
     if(!checkboxesStates.some(state => state == true)){
-        selectedEventsIndexes = evenstIndexes;
+        selectedEventsIndexes = eventsIndexes;
     }
     else{
         checkboxes.forEach(checkbox => {
             if(checkbox.checked){
-                evenstIndexes.forEach(index =>{
+                eventsIndexes.forEach(index =>{
                     if(eventsData.events[index].category.toLowerCase() == checkbox.value){
                         selectedEventsIndexes.push(eventsData.events.indexOf(eventsData.events[index]));
                     }
@@ -170,7 +148,7 @@ function getSelectedEventsBySearchImputIndexes(eventsData, eventIndexes, searchK
             selectedEventsIndexes = eventIndexes;
         }
         else if(eventsData.events[index].name.toLowerCase().includes(searchKey) || 
-                data.events[index].description.toLowerCase().includes(searchKey)){
+        eventsData.events[index].description.toLowerCase().includes(searchKey)){
                 selectedEventsIndexes.push(index);
         }
     });

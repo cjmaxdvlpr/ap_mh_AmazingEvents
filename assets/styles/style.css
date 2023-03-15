@@ -24,6 +24,14 @@
     box-shadow: -2px -2px 10px -1px rgba(0, 0, 0, 0.75);
 }
 
+.sombreado2 {
+    box-shadow: -2px -2px 10px -1px rgba(255, 255, 255, 0.75);
+}
+
+.sombreadoTexto1{
+    text-shadow: -1px -1px 1px rgb(243, 240, 240);
+}
+
 img.imagenGrisada {
     opacity: 0.15;
     filter: alpha(opacity=40);
