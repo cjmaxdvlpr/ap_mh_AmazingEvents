@@ -43,6 +43,7 @@ async function home(urlApi) {
     try {
         const response = await fetch(urlApi);
         let data = await response.json();
+        // console.log(data);
         let eventsIndexes = getFilteredByDateEventsIndexes(data, "all");
         let categories = getCategories(data, eventsIndexes);
         fillCardContainer(buildHTMLEventsOfInterestCardList(data, eventsIndexes, "all"), "cardContainer");
@@ -52,14 +53,14 @@ async function home(urlApi) {
 
         //EVENT: keyup (searchInput) ===========================================
         input.addEventListener("keyup", (event) => {
-            console.log("keyup");
+            // console.log("keyup");
             searchEventResponse(urlApi);
         })
 
         //EVENT: change (checkboxes) ==============================
         checkboxes.forEach(checkbox => {
             checkbox.addEventListener("change", () => {
-                console.log("change");
+                // console.log("change");
                 searchEventResponse(urlApi)
             })
         })
