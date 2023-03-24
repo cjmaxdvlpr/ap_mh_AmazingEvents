@@ -56,9 +56,8 @@ function getLargerCapacityEventsIndexes(eventsData, eventsIndexes){
         if(eventCapacityA > eventCapacityB) return -1;
         return 1;
     })
-    return (orderedEventsIndexes.length > 10)? 
-                orderedEventsIndexes.slice(0,10) : 
-                orderedEventsIndexes;
+    return (orderedEventsIndexes.length > 10)?  orderedEventsIndexes.slice(0,10) : 
+                                                orderedEventsIndexes;
 }
 
 function getEventsCategoriesStats(eventsData, eventIndexes, categories){
@@ -98,15 +97,15 @@ function fillTop10EventsStatsTable(eventsData, eventsIndexes, tableId){
         let row = table.insertRow();
         let highestPOfACell = row.insertCell(0);
         highestPOfACell.innerHTML = eventsData.events[highestPercentageAttendanceEventsIndexes[i]].name + 
-                                    ":\xa0\xa0\xa0\xa0\xa0\xa0" + 
+                                    " (" + eventsData.events[highestPercentageAttendanceEventsIndexes[i]].category + "):\xa0\xa0\xa0\xa0\xa0\xa0" + 
                                     eventPercentageAttendance(eventsData.events[highestPercentageAttendanceEventsIndexes[i]]);
         let lowestPOfACell = row.insertCell(1);
         lowestPOfACell.innerHTML = eventsData.events[lowestPercentageAttendanceEventsIndexes[i]].name + 
-                                    ":\xa0\xa0\xa0\xa0\xa0\xa0" + 
+                                    " (" + eventsData.events[lowestPercentageAttendanceEventsIndexes[i]].category + "):\xa0\xa0\xa0\xa0\xa0\xa0" + 
                                     eventPercentageAttendance(eventsData.events[lowestPercentageAttendanceEventsIndexes[i]]);
         let largerCapacityCell = row.insertCell(2);
         largerCapacityCell.innerHTML = eventsData.events[largerCapacityEventsIndexes[i]].name + 
-                                        ":\xa0\xa0\xa0\xa0" + 
+                                        " (" + eventsData.events[largerCapacityEventsIndexes[i]].category + "):\xa0\xa0\xa0\xa0" + 
                                         eventsData.events[largerCapacityEventsIndexes[i]].capacity.toLocaleString();
     };
 

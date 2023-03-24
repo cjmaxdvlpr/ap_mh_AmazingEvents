@@ -52,7 +52,7 @@ async function home(urlApi) {
         checkboxes = document.querySelectorAll("input[type=checkbox]");
 
         //EVENT: keyup (searchInput) ===========================================
-        input.addEventListener("keyup", (event) => {
+        input.addEventListener("input", () => {
             // console.log("keyup");
             searchEventResponse(urlApi);
         })
@@ -91,6 +91,14 @@ async function searchEventResponse(urlApi){
 }
 
 let urlApi = " https://mindhub-xj03.onrender.com/api/amazing";
+
+/* let currentlyStates = {
+    showedCardsIndexes : [],
+    searchInput : ""
+}
+localStorage.setItem('currentlyStates', JSON.stringify(currentlyStates));
+currentlyStates = JSON.parse(localStorage.getItem('currentlyStates')); */
+
 
 let checkboxes = document.querySelectorAll("input[type=checkbox]");
 let input = document.getElementById("searchInput");

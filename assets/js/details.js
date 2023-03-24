@@ -5,6 +5,10 @@ async function details(urlApi) {
         const response = await fetch(urlApi);
         let data = await response.json();
         let event = data.events.find(event => event._id == id);
+        
+        document.getElementById('backArrow').addEventListener("click", () => {
+            history.back();
+        });
 
         document.getElementById('cardContainer').innerHTML = 
         `<div class="card border-dark rounded-0 sombreado m-4 col-8">
@@ -18,7 +22,7 @@ async function details(urlApi) {
                             <p class="mx-3"><b>Price:</b> $${event.price}</p>
                             <p class="mx-3"><b>Place:</b> ${event.place}</p>
                             <p class="mx-3"><b>Capacity:</b> ${event.capacity}</p>
-                            <p class="mx-3"><b>${Object.keys(event)[8].charAt(0).toUpperCase() + Object.keys(event)[8].slice(1)}:</b> ${Object.values(event)[8]}</p>
+                            <p class="mx-3"><b>${Object.keys(event)[9].charAt(0).toUpperCase() + Object.keys(event)[9].slice(1)}:</b> ${Object.values(event)[9]}</p>
                         </div>
                     </div>
                 </div>
